@@ -1,0 +1,14 @@
+from docx import Document
+
+def create_word_document(filename, text):
+    # 创建一个新的Word文档对象
+    doc = Document()
+
+    # 添加一个段落并写入一些文本
+    doc.add_paragraph(text)
+
+    # 保存这个文档
+    doc.save(filename)
+
+# 使用函数
+create_word_document('test.docx', 'Hello, this is a test document.')
